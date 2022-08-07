@@ -1,18 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import { Alert } from 'flowbite-react';
+import { Provider } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Users from "./pages/Users";
+import store from "./store";
 
-function App() {
+const App = () => {
   return (
     <>
-      <Alert color="info">
-        <span>
-          <span className="font-medium">
-            Info alert!
-          </span>
-          this is a info alert
-        </span>
-      </Alert>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Users />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </>
   );
 }
