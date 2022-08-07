@@ -16,6 +16,7 @@ const SideBar = ({ show }) => {
                 <hr />
                 <div className="flex flex-col space-y-3 justify-center items-center pt-3">
                     <Menu title={'Users'} path="/" />
+                    <Menu title={'Graph'} path="/grap" />
                 </div>
             </div>
         </>
