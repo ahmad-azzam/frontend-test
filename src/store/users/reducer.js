@@ -1,7 +1,8 @@
-const { GET_USERS } = require("./actionType")
+const { GET_USERS, LOADING_USERS } = require("./actionType")
 
 const initialState = {
-    users: []
+    users: [],
+    loading: false
 }
 
 const reducerUser = (state = initialState, action) => {
@@ -10,6 +11,12 @@ const reducerUser = (state = initialState, action) => {
             return {
                 ...state,
                 users: action.payload
+            }
+        }
+        case LOADING_USERS: {
+            return {
+                ...state,
+                loading: action.payload
             }
         }
         default: return state
